@@ -1,0 +1,6 @@
+nltk
+librosa
+numpy
+scipy
+python-dotenv
+requests
