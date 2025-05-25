@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { translateText } = require('../services/translationService');
 const { enrichLyricsWithSonar } = require('../services/sonarService');
+const { alignSyllables } = require('../services/alignmentService');
 
 router.post('/', async (req, res) => {
   const { text } = req.body;
@@ -13,7 +14,13 @@ router.post('/', async (req, res) => {
 
     const enrichment = enrichmentRaw.choices?.[0]?.message?.content || 'No explanation found.';
 
-    res.json({ translated, enrichment });
+    const alignment = await alignSyllables(text, translated);
+    res.json({
+      translated,
+      enrichment,
+      alignment
+    });
+
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
