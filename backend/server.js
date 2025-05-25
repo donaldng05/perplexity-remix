@@ -1,4 +1,5 @@
-require('dotenv').config();
+require('dotenv').config({ path: __dirname + '/.env' });
+console.log("DEBUG: process.env =", process.env);
 const express = require('express');
 const app = express();
 
