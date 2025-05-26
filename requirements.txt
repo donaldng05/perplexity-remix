@@ -10,3 +10,7 @@ underthesea
 # New dependencies for OCR script
 pytesseract
 Pillow
+yt-dlp
+
+paddleocr
+paddlepaddle
