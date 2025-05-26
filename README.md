@@ -23,6 +23,25 @@ This repository contains the code and documentation for RemixMate, developed as 
 
 Instructions for setting up the project, running the backend microservice, and launching the frontend will be provided here.
 
+### Prerequisites
+
+- Python 3.11+
+- `ffmpeg` installed and added to system PATH  
+  ↳ [Download FFmpeg](https://ffmpeg.org/download.html)
+
 ---
 
+
+### Purpose of Each Script
+
+| Script                        | Description                                                                 |
+|------------------------------|-----------------------------------------------------------------------------|
+| `download_tiktok_videos.py`  | Downloads videos from TikTok based on the list in `tiktok_urls.txt`.       |
+| `extract_frames.py`          | Uses FFmpeg to extract one frame per second from each video.               |
+| `detect_bad_frames.py`       | Detects duplicate/empty/incomplete lyric frames for manual review.         |
+| `extract_lyrics_from_frames.py` | Runs PaddleOCR over selected frames to extract Vietnamese lyrics.        |
+| `syllable_aligner.py`        | (Planned) Aligns Vietnamese and English lyrics syllable by syllable.       |
+
 *For detailed feature descriptions, architecture, and development roadmap, please refer to the documentation folder.*
+
+
