@@ -6,3 +6,7 @@ python-dotenv
 requests
 pyphen
 underthesea
+
+# New dependencies for OCR script
+pytesseract
+Pillow
