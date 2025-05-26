@@ -31,3 +31,6 @@ logs/
 *.swp
 
 *.jpg
+*.mp4
+
+rhythm-aligner/failed_lyrics/
