@@ -36,3 +36,5 @@ logs/
 rhythm-aligner/failed_lyrics/
 rhythm-aligner/transcribed_lyrics/
 rhythm-aligner/failed_transcripts/
+
+remixmate.db
